@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useReservationStore } from "@/hooks/useReservationStore";
+import Link from "next/link";
+
+const DEFAULT_CATEGORY = "minuman";
 
 export function HeroSection() {
   const { onOpen } = useReservationStore();
@@ -40,8 +43,9 @@ export function HeroSection() {
               size="lg"
               className="font-bold text-lg px-8 py-6 transition-transform duration-300 hover:scale-105"
             >
-              <a href="#menu">Lihat Menu</a>
+              <Link href={`/menu/${DEFAULT_CATEGORY}`}>Lihat Menu</Link>
             </Button>
+
             <Button
               onClick={onOpen}
               asChild

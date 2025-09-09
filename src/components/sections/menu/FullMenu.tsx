@@ -1,4 +1,4 @@
-// src/components/sections/FullMenu.tsx
+// src/components/sections/menu/FullMenu.tsx
 "use client"; // <-- Tandai sebagai Client Component karena interaktif
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

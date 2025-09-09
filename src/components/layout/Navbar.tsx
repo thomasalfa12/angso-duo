@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useReservationStore } from "@/hooks/useReservationStore"; // Menggunakan path store Anda
+import { useReservationStore } from "@/hooks/useReservationStore";
 import {
   Home,
   UtensilsCrossed,
@@ -10,12 +10,14 @@ import {
   BookMarked,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-// Hapus "Reservasi" dari data link utama
+const DEFAULT_CATEGORY = "makanan";
+
 const navLinks = [
-  { name: "Home", href: "#home", icon: Home },
-  { name: "Menu", href: "#menu", icon: UtensilsCrossed },
-  { name: "Galeri", href: "#gallery", icon: GalleryHorizontal },
+  { name: "Home", href: "/", icon: Home },
+  { name: "Menu", href: `/menu/${DEFAULT_CATEGORY}`, icon: UtensilsCrossed },
+  { name: "Galeri", href: "/#gallery", icon: GalleryHorizontal },
 ];
 
 export function Navbar() {
@@ -24,17 +26,16 @@ export function Navbar() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      // Tampilkan navbar setelah scroll melewati tinggi viewport
-      if (window.scrollY > window.innerHeight * 0.8) {
-        setIsMobileNavVisible(true);
-      } else {
-        setIsMobileNavVisible(false);
-      }
+      setIsMobileNavVisible(window.scrollY > window.innerHeight * 0.8);
     };
-
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
+
+  const handleMobileClick = () => {
+    // opsional: tutup dock setelah navigasi
+    setIsMobileNavVisible(false);
+  };
 
   return (
     <>
@@ -51,14 +52,15 @@ export function Navbar() {
           >
             <div className="flex justify-around items-center h-16">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
+                  onClick={handleMobileClick}
                   className="flex flex-col items-center justify-center text-xs text-muted-foreground hover:text-primary transition-colors"
                 >
                   <link.icon className="w-5 h-5 mb-1" />
                   <span>{link.name}</span>
-                </a>
+                </Link>
               ))}
               {/* Tombol Reservasi terpisah */}
               <button
@@ -76,18 +78,18 @@ export function Navbar() {
       {/* Desktop Navbar (Floating Pill) */}
       <nav className="hidden md:flex justify-center w-full fixed top-4 z-50 animate-fade-in-down">
         <div className="flex items-center justify-between gap-8 bg-card/60 backdrop-blur-lg rounded-full shadow-lg px-6 py-2">
-          <a href="#home" className="text-xl font-bold text-primary">
+          <Link href="/" className="text-xl font-bold text-primary">
             Angso Duo
-          </a>
+          </Link>
           <div className="flex items-center space-x-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
           <Button onClick={onOpen} size="sm" className="rounded-full">
