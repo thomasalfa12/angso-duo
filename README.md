@@ -1,37 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ☕ Template Kuliner "Angso Duo"
 
-## Getting Started
+![Pratinjau Template Angso Duo](https://i.imgur.com/uRj0p6G.jpeg)
 
-First, run the development server:
+**"Angso Duo"** adalah sebuah purwarupa (_prototype_) _landing page_ yang dirancang sebagai solusi digital modern untuk bisnis di industri kuliner. Proyek ini bertujuan untuk menunjukkan bagaimana sebuah website dapat menjadi alat pemasaran yang kuat, menggabungkan estetika desain yang hangat dengan fungsionalitas yang berorientasi pada pelanggan.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**[➡️ Lihat Live Demo](https://angso-duo-cafe-template.vercel.app/)**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Tujuan & Target Pengguna
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tujuan utama dari template ini adalah menyediakan sebuah "wajah digital" yang profesional dan menggugah selera, yang mampu mengubah pengunjung online menjadi pelanggan nyata.
 
-## Learn More
+Template ini dirancang secara spesifik untuk bisnis seperti:
 
-To learn more about Next.js, take a look at the following resources:
+* **Kafe & Coffee Shop:** Menampilkan suasana tempat yang nyaman dan menu kopi andalan.
+* **Restoran & Rumah Makan:** Memberikan kesan pertama yang mewah atau kasual sesuai dengan citra brand, serta memudahkan proses reservasi.
+* **Jasa Katering:** Memamerkan portofolio hidangan dan paket yang ditawarkan dalam galeri yang menarik.
+* **Toko Roti & Kue (Bakery):** Menyoroti detail dan keindahan produk melalui visual yang kuat.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Fitur Unggulan Konseptual
 
-## Deploy on Vercel
+Setiap fitur dalam template ini dirancang untuk menjawab kebutuhan spesifik bisnis kuliner.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **🍽️ Etalase Menu Digital:** Lebih dari sekadar daftar, fitur ini berfungsi sebagai etalase visual. Tampilan menu dengan kategori, gambar, deskripsi, dan harga dirancang untuk membantu pelanggan mengambil keputusan dan meningkatkan keinginan untuk memesan.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# angso-duo
+* **📸 Galeri Pencerita Visual:** Galeri foto bukan hanya kumpulan gambar, melainkan alat untuk bercerita—tentang kualitas bahan baku, suasana hangat di dalam kafe, dan kelezatan hidangan yang disajikan.
+
+* **🚀 Akselerator Pemesanan:** Tombol "Pesan via WhatsApp/GoFood" ditempatkan secara strategis untuk mengurangi hambatan bagi pelanggan yang ingin memesan. Ini adalah jembatan langsung dari minat menjadi transaksi.
+
+* **🗓️ Sistem Reservasi Terintegrasi:** Formulir reservasi yang mudah diakses berfungsi untuk memberikan kepastian bagi pelanggan dan membantu manajemen operasional dalam mengatur kapasitas tempat duduk.
+
+---
+
+## 🎨 Filosofi Desain
+
+Desain "Angso Duo" berpegang pada tiga pilar utama:
+
+1.  **Hangat & Mengundang:** Penggunaan palet warna yang terinspirasi dari kopi dan elemen bumi menciptakan suasana yang ramah dan nyaman, seolah-olah menyambut pelanggan bahkan sebelum mereka tiba.
+2.  **Modern & Bersih:** Tata letak yang terstruktur, ruang kosong yang cukup, dan hierarki visual yang jelas memastikan informasi penting (seperti menu dan tombol aksi) mudah ditemukan.
+3.  **Tipografi yang Berbicara:** Pemilihan jenis huruf dilakukan dengan cermat untuk memastikan keterbacaan maksimal sekaligus menambah karakter pada brand.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+Untuk mencapai performa dan tampilan visual yang optimal, proyek ini dibangun menggunakan tumpukan teknologi modern:
+
+* **Framework**: Next.js 14
+* **Styling**: Tailwind CSS
+* **Komponen UI**: shadcn/ui
+* **Manajemen State**: Zustand
+* **Validasi Form**: React Hook Form & Zod
+* **Deployment**: Vercel
