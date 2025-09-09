@@ -1,20 +1,17 @@
-import { menuData } from "@/data/mock";
+// src/app/menu/[category]/page.tsx
+import { menuData } from "@/data/mock"; // atau "@/data/menu" sesuai file kamu
 import { FullMenu } from "@/components/sections/menu/FullMenu";
 
-// 1. Definisikan tipe untuk props di sini menggunakan interface
-interface FullMenuPageProps {
-  params: {
-    category: string;
-  };
-}
+type Props = {
+  params: Promise<{ category: string }>;
+};
 
-// 2. Gunakan interface yang sudah dibuat sebagai tipe untuk props
-export default async function FullMenuPage({ params }: FullMenuPageProps) {
-  const allMenuItems = menuData;
+export default async function FullMenuPage({ params }: Props) {
+  const { category } = await params; // <- wajib di-await
 
   return (
     <div className="container mx-auto px-6 py-24 pt-36 min-h-screen">
-      <FullMenu allMenuItems={allMenuItems} initialCategory={params.category} />
+      <FullMenu allMenuItems={menuData} initialCategory={category} />
     </div>
   );
 }
