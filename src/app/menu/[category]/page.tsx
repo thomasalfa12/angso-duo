@@ -9,7 +9,7 @@ interface FullMenuPageProps {
 }
 
 // 2. Gunakan interface yang sudah dibuat sebagai tipe untuk props
-export default function FullMenuPage({ params }: FullMenuPageProps) {
+export default async function FullMenuPage({ params }: FullMenuPageProps) {
   const allMenuItems = menuData;
 
   return (
