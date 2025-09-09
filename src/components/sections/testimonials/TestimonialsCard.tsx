@@ -1,6 +1,6 @@
 // src/components/sections/TestimonialCard.tsx
 import { Card, CardContent } from "@/components/ui/card";
-import { TestimonialItem } from "@/data/mock";
+import type { TestimonialItem } from "@/lib/types";
 import { Star } from "lucide-react";
 import Image from "next/image";
 
